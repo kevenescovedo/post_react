@@ -15,7 +15,7 @@ class Home extends Component {
     postPerPage: 4,
     searchValue : "",
   }
-  loadAMorePosts = () =>{
+loadAMorePosts = () =>{
    const {page,postPerPage,allPosts,posts} = this.state;
    const nextPage = page + postPerPage;
   const nexPost = allPosts.slice(page,nextPage + postPerPage);

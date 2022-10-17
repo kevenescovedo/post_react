@@ -1,9 +1,9 @@
 import { PostCard } from "../PostCard";
 import './style.css';
 
-export const Posts = (props) => {
-
-    let {posts} = props;
+export const Posts = ({posts = []}) => {
+   
+   
     return (
         <div className='container'> <div className="posts">
         {posts.map((post) => {

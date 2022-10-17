@@ -5,6 +5,6 @@ export class Button extends Component {
     state = {}
     render() {
         const {text, onClick, disabled} = this.props;
-    return <button onClick={onClick} disabled={disabled} className="button">{text}</button>
+    return <button onClick={onClick} disabled={disabled} className="btn">{text}</button>
     }
 }
