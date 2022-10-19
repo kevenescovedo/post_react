@@ -6,7 +6,7 @@ import { postCardPropsMock } from "./mock";
 const props = postCardPropsMock;
 describe('<PostCard/>', () => {
 it('should render PostCard Correctly', () => {
-const {debug} = render(<PostCard post={props}/>);
+const {debug} = render(<PostCard {...props}/>);
 
 //ver se tem imagemn o documento
 expect(screen.getByRole("img", {name: props.title})).toBeInTheDocument();
@@ -18,8 +18,8 @@ expect(screen.getByRole('heading', {name: props.title})).toBeInTheDocument();
 expect(screen.getByText(props.body)).toBeInTheDocument();
 });
 it('should match snapshot', () => {
-    const {debug,container} = render(<PostCard post={props}/>);
-    
+    const {debug,container} = render(<PostCard {...props}/>);
+
     expect(container.firstChild).toMatchSnapshot();
     })
 })
